@@ -61,7 +61,7 @@ def draw_solution_svg(x, lam):
     D = cmath.rect(110, cmath.pi/2 - the/2)
     E = cmath.rect(110, cmath.pi/2 - phi/2) + A
 
-    return f'''<svg viewBox="-250 -250 500 300" xmlns="http://www.w3.org/2000/svg">
+    return f'''<svg viewBox="-250 -250 500 500" xmlns="http://www.w3.org/2000/svg">
 <defs>
     <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="5" markerHeight="5">
@@ -70,7 +70,7 @@ def draw_solution_svg(x, lam):
 </defs>
 <rect x="-250" y="0" width="500" height="50" fill="lightgrey" />
 <path d="M -250 0 250 0 M 0 30 v -180 M 0 -100 A 100 100 0 0 {int(the>0)} {A.real} {-A.imag} v -150 m 0 50 A 100 100 0 0 {int(phi>0)} {B.real} {-B.imag}"
-      stroke="black" fill="none"/>
+      stroke="grey" fill="none"/>
 <path d="M {B.real} {-B.imag} v {50*lam} m 0 18 6 -18 -12 0 Z"
       stroke="red" fill="red"/>
 <text x="{D.real}" y="{-D.imag}" dominant-baseline="middle" text-anchor="middle">θ={the:.2f}</text>
