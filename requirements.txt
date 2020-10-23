@@ -2,3 +2,5 @@ notebook
 sympy
 ipywidgets
 numpy
+matplotlib
+ipympl
